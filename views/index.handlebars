@@ -1,0 +1,47 @@
+<h1 class="text-center">EAT THIS FRIGGIN BURGER</h1>
+<h2 class="text-center">I SAID EAT IT</h2>
+
+<div class="row mt-5">
+    <div class="col-4 bg-primary offset-1">
+        <h4 class="text-center">Burgers to be devoured</h4>
+
+        <ul>
+            {{#each burger}}
+            {{#unless devoured}}
+            <li>
+                {{burger_name}}
+
+                <button class="change-devoured" data-id="{{id}}" data-newState="{{devoured}}">
+                    {{#unless devoured}}EAT IT!{{/unless}}
+                </button>
+
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-4 bg-success offset-1">
+        <h4 class="text-center">Burgers Already Devoured</h4>
+        <ul>
+            {{#each burger}}
+            {{#if devoured}}
+            <li>
+                {{burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<div class="col-10 offset-1 bg-info m-5">
+    <h4 class="text-center">Make a Burger</h4>
+    <div class="input-group">
+        <input type="text" class="form-control" id="newBurger" placeholder="Enter a burger" aria-label="Enter a Burger"
+            aria-describedby="button-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-outline-dark" type="button" id="submitBtn">MAKE IT!</button>
+        </div>
+    </div>
+</div>
+
