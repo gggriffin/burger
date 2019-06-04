@@ -37,12 +37,5 @@ router.post('/api/burgers', function(req, res) {
         res.json({ id: result.insertId })
     })
 })
-/* router.update('/burgers/update/:devoured', function (req,res){
-    let condition = 'id = ' + req.params.id;
-    burger.update(condition, function(){
-        res.redirect('/');
-    })
-}); */
-
 
 module.exports = router;

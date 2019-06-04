@@ -1,0 +1,30 @@
+.testColor {
+    background-color: #1768AC;
+    color: #9BBDF9;
+    border-bottom: 10px solid #FFFFFF;
+    border-top: 10px solid #FFFFFF;
+}
+
+.background {
+    background-color: #1BE7FF;
+    height: 150vh;
+}
+
+.devoured {
+    background-color: #67AAF9;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.submit-form {
+    background-color: #1768AC;
+    color: #9BBDF9;
+    border: 5px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.burger-pic {
+    width: 25vh;
+    height: 25vh;
+}

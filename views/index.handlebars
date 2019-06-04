@@ -1,47 +1,52 @@
-<h1 class="text-center">EAT THIS FRIGGIN BURGER</h1>
-<h2 class="text-center">I SAID EAT IT</h2>
-
-<div class="row mt-5">
-    <div class="col-4 bg-primary offset-1">
-        <h4 class="text-center">Burgers to be devoured</h4>
-
-        <ul>
-            {{#each burger}}
-            {{#unless devoured}}
-            <li>
-                {{burger_name}}
-
-                <button class="change-devoured" data-id="{{id}}" data-newState="{{devoured}}">
-                    {{#unless devoured}}EAT IT!{{/unless}}
-                </button>
-
-            </li>
-            {{/unless}}
-            {{/each}}
-        </ul>
-    </div>
-
-    <div class="col-4 bg-success offset-1">
-        <h4 class="text-center">Burgers Already Devoured</h4>
-        <ul>
-            {{#each burger}}
-            {{#if devoured}}
-            <li>
-                {{burger_name}}
-            </li>
-            {{/if}}
-            {{/each}}
-        </ul>
-    </div>
+<div class="testColor">
+    <h1 class="text-center">EAT THIS BURGER</h1>
+    <h2 class="text-center">I SAID EAT IT</h2>
 </div>
-<div class="col-10 offset-1 bg-info m-5">
-    <h4 class="text-center">Make a Burger</h4>
-    <div class="input-group">
-        <input type="text" class="form-control" id="newBurger" placeholder="Enter a burger" aria-label="Enter a Burger"
-            aria-describedby="button-addon2">
-        <div class="input-group-append">
-            <button class="btn btn-outline-dark" type="button" id="submitBtn">MAKE IT!</button>
+
+<div class="background">
+    <div class="row">
+        <div class="col-4 devoured offset-2 mt-5 mr-4 p-3">
+            <h4 class="text-center">Burgers to be Devoured</h4>
+
+            <ul>
+                {{#each burger}}
+                {{#unless devoured}}
+                <li class="m-2">
+                    {{burger_name}}
+
+                    <button class="change-devoured float-right" data-id="{{id}}" data-newState="{{devoured}}">
+                        {{#unless devoured}}EAT IT!{{/unless}}
+                    </button>
+
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-4 devoured mt-5 p-3">
+            <h4 class="text-center">Burgers Already Devoured</h4>
+            <ul>
+                {{#each burger}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <img src="/assets/img/burgerpic.png" class="rounded mx-auto d-block img-fluid burger-pic ml-5" alt="...">
+
+    <div class="col-10 offset-1 mb-5 mt-2 mr-5 p-5 submit-form">
+        <h2 class="text-center mb-5">Make a Burger</h2>
+        <div class="input-group">
+            <input type="text" class="form-control" id="newBurger" placeholder="Enter a burger" aria-label="Enter a Burger"
+                aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-dark" type="button" id="submitBtn">MAKE IT!</button>
+            </div>
         </div>
     </div>
 </div>
-
